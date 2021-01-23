@@ -10,10 +10,10 @@ module.exports = {
     filename: 'bundle.js',
   },
   devServer: {
-    plugins: [new TsconfigPathsPlugin()],
     contentBase: path.resolve(__dirname, 'public'),
   },
   resolve: {
+    plugins: [new TsconfigPathsPlugin()],
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   module: {

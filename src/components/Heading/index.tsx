@@ -1,7 +1,9 @@
 import React from 'react';
 
+import * as S from './styles';
+
 const Heading = ({ title = 'Hello World' }) => {
-  return <h1>{title}</h1>;
+  return <S.Wrapper>{title}</S.Wrapper>;
 };
 
 export default Heading;

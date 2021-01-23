@@ -5,8 +5,16 @@ import Heading from '.';
 
 describe('<Heading />', () => {
   it('should render the heading', () => {
-    render(<Heading />);
+    const { container } = render(<Heading />);
 
-    expect(screen.getByRole('heading', { name: /hello world/i }));
+    expect(
+      screen.getByRole('heading', { name: /hello world/i }),
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByRole('heading', { name: /hello world/i }),
+    ).toHaveStyleRule('color', '#333');
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

@@ -11,7 +11,11 @@
   },
   "scripts": {
     "dev": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
@@ -19,6 +23,10 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "@babel/preset-typescript": "^7.12.7",
+    "@storybook/addon-actions": "^6.1.15",
+    "@storybook/addon-essentials": "^6.1.15",
+    "@storybook/addon-links": "^6.1.15",
+    "@storybook/react": "^6.1.15",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
